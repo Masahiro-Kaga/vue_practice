@@ -10,21 +10,16 @@
     <script src="app.js" defer></script>
   </head>
   <body>
+      <Header>
+          <h1>Vue Events</h1>
+      </Header>
     <section id="user-info">
-        <h1>Your Name</h1>
-        <p>{{name}}</p>
-        <h2>Age</h2>
-        <p>{{age}}</p>
-        <h2>Age + 5</h2>
-        <p>{{agePlusFive}}</p>
-        <h2>Favorite Number</h2>
-        <p>{{favoriteNumberRandom()}}</p>
-        <h2>Favorite pictue</h2>
-        <input type="text" v-model="name" />
-        <!-- <input type="text" v-bind:value="name" /> -->
-        <figure>
-            <img v-bind:src='favoritePic' >
-        </figure>
+        <h1 style="background-color : blue">Events in Action</h1>
+        <!-- <button v-on:click="addCount">Add</button>
+        <button v-on:click="reduceCount">Remove</button> -->
+        <button v-on:click="counter++">Add</button>
+        <button v-on:click="counter--">Remove</button>
+        <p>Result: {{counter}}</p>
     </section>
 
   </body>
