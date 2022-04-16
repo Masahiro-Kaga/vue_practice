@@ -1,11 +1,14 @@
-<!-- No.19 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/vue@next" defer></script>
     <script src="app.js" defer></script>
   </head>
@@ -13,27 +16,14 @@
     <header>
       <h1>Vue Events</h1>
     </header>
-    <section id="user-info">
-      <h1 style="background-color: blue">Events in Action</h1>
-      <!-- <button v-on:click="addCount">Add</button>
-        <button v-on:click="reduceCount">Remove</button> -->
-      <button v-on:click="addCount(10)">Add</button>
-      <button v-on:click.right="reduceCount(3)">Remove</button><!-- マウス右クリックで発動 -->
-      <p v-once>Starting Counter: {{counter}}</p>
-      <p>Result: {{counter}}</p>
-
-      <!-- <input type="text" v-on:input="setName($event,'Masahiro')" v-on:keyup.enter="confirmInput($event)"/> -->
-      <!-- <input type="text" v-bind:value="name" v-on:input="setName($event)" /> -->
-      <input type="text" v-model="name" />
-      <span>please press enter</span>
-      <!-- <p>{{name}}</p> -->
-      <p>{{name}}</p>
-      <p>{{confirmName}}</p>
-      <button v-on:click="reset">Reset</button>
-      <!-- <form v-on:submit="submitForm"> -->
-      <form v-on:submit.prevent="submitForm">
-          <button>Sign up</button>
-      </form>
+    <section id="events">
+      <h2>Events in Action</h2>
+      <button v-on:click="add(10)">Add 10</button>
+      <button v-on:click="reduce(5)">Subtract 5</button>
+      <p>Result: {{ counter }}</p>
+      <input type="text" v-model="name">
+      <button v-on:click="resetInput">Reset Input</button>
+      <p>Your Name: {{ fullname }}</p>
     </section>
   </body>
 </html>
