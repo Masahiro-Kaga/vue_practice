@@ -1,16 +1,24 @@
 const app = Vue.createApp({
   data() {
     return {
-        counter:0
-    }
+      counter: 0,
+      name: "",
+    };
   },
   methods: {
-    addCount(){
-        return this.counter++;
+    submitForm(event) {
+    //   event.preventDefault();
+      alert('Submitted');
     },
-    reduceCount(){
-        return this.counter--;
-    }
+    addCount() {
+      return this.counter++;
+    },
+    reduceCount() {
+      return this.counter--;
+    },
+    setName(e, lastName) {
+      return (this.name = e.target.value + " " + lastName);
+    },
   },
 });
 

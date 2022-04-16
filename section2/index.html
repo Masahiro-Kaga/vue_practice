@@ -10,17 +10,24 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-      <Header>
-          <h1>Vue Events</h1>
-      </Header>
+    <header>
+      <h1>Vue Events</h1>
+    </header>
     <section id="user-info">
-        <h1 style="background-color : blue">Events in Action</h1>
-        <!-- <button v-on:click="addCount">Add</button>
+      <h1 style="background-color: blue">Events in Action</h1>
+      <!-- <button v-on:click="addCount">Add</button>
         <button v-on:click="reduceCount">Remove</button> -->
-        <button v-on:click="counter++">Add</button>
-        <button v-on:click="counter--">Remove</button>
-        <p>Result: {{counter}}</p>
-    </section>
+      <button v-on:click="counter++">Add</button>
+      <button v-on:click="counter--">Remove</button>
+      <p>Result: {{counter}}</p>
 
+      <input v-on:input="setName($event,'Masahiro')" />
+      <p>{{name}}</p>
+      <!-- <form v-on:submit="submitForm"> -->
+      <form v-on:submit.prevent="submitForm">
+          <input type='text'/>
+          <button>Sign up</button>
+      </form>
+    </section>
   </body>
 </html>
