@@ -17,8 +17,9 @@
       <h1 style="background-color: blue">Events in Action</h1>
       <!-- <button v-on:click="addCount">Add</button>
         <button v-on:click="reduceCount">Remove</button> -->
-      <button v-on:click="counter++">Add</button>
-      <button v-on:click.right="counter--">Remove</button><!-- マウス右クリックで発動 -->
+      <button v-on:click="addCount(10)">Add</button>
+      <button v-on:click.right="reduceCount(3)">Remove</button><!-- マウス右クリックで発動 -->
+      <p v-once>Starting Counter: {{counter}}</p>
       <p>Result: {{counter}}</p>
 
       <input v-on:input="setName($event,'Masahiro')" v-on:keyup.enter="confirmInput($event)"/>

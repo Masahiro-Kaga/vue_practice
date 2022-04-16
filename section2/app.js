@@ -14,11 +14,11 @@ const app = Vue.createApp({
     //   event.preventDefault();
       alert('Submitted');
     },
-    addCount() {
-      return this.counter++;
+    addCount(num) {
+      this.counter += num;
     },
-    reduceCount() {
-      return this.counter--;
+    reduceCount(num) {
+      this.counter -= num;
     },
     setName(e, lastName) {
       return (this.name = e.target.value + " " + lastName);
