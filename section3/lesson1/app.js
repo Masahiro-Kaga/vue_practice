@@ -2,7 +2,7 @@ const app = Vue.createApp({
   data() {
     return {
       enteredGoalValue: "",
-      goals: [],
+      goals: ["masahiro","eri","kimiko","shinichi"],
       demoObj: {
         firstName: "Masahiro",
         lastName: "Kaga",
@@ -15,6 +15,9 @@ const app = Vue.createApp({
     addGoal() {
       this.goals.push(this.enteredGoalValue);
     },
+    removeGoal(index){
+      this.goals.splice(index,1);
+    }
   },
 });
 
