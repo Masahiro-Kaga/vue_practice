@@ -6,12 +6,16 @@ const app = Vue.createApp({
             boxC:false
         }
     },
+    computed:{
+        boxAclasses(){
+            return {redBox:this.boxA}
+        }
+    },
     methods:{
         toggleBoxColor(typeofbox){
             switch(typeofbox){
                 case 'a':
                     this.boxA = !this.boxA;
-                    console.log(123);
                     break;
                 case 'b':
                     this.boxB = !this.boxB;
