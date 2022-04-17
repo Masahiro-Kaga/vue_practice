@@ -19,9 +19,9 @@
     <section id="styling">
       <!-- <div class="demo" :style="{backgroundColor: firstBoxRed ? 'salmon' : ''}" @click="toggleBoxColor"></div> -->
       <!-- <div class="demo" :class="firstBoxRed ? 'redBox' : ''" @click="toggleBoxColor"></div> -->
-      <div class="demo" :class="{redBox:firstBoxRed}" @click="toggleBoxColor"></div>
-      <div class="demo"></div>
-      <div class="demo"></div>
+      <div class="demo" :class="{redBox:boxA}" @click="toggleBoxColor('a')"></div>
+      <div class="demo" :class="{redBox:boxB}" @click="toggleBoxColor('b')"></div>
+      <div class="demo" :class="{redBox:boxC}" @click="toggleBoxColor('c')"></div>
     </section>
   </body>
 </html>
