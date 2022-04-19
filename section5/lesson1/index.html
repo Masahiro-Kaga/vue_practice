@@ -11,10 +11,22 @@
 <body>
     <h1>Vue Behind the scene</h1>
     <section id="section1">
-        <input type="text" v-model="userTodo" />
-        <button @click="addTodo">Set text</button>
+        <input type="text" v-model="userTodo1" />
+        <button @click="addTodo1">Set text</button>
         <ul>
-            <li v-for="todo in todoList">{{todo}}</li>
+            <li v-for="todo1 in todoList1">{{todo1}}</li>
+        </ul>
+
+        <input type="text" @input="setText1($event)" />
+        <button @click="addTodo2">Set text</button>
+        <ul>
+            <li v-for="todo2 in todoList2">{{todo2}}</li>
+        </ul>
+
+        <input type="text" ref="usertxt"/>
+        <button @click="addTodo3">Set text</button>
+        <ul>
+            <li v-for="todo3 in todoList3">{{todo3}}</li>
         </ul>
     </section>
     <section id="section2">
