@@ -4,6 +4,6 @@ import FriendContact from './components/FriendContact.vue';
 
 const app = createApp(App);
 
-app.component(FriendContact);
+app.component('friend-contact',FriendContact);
 
 app.mount('#app')
