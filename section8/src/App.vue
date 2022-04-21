@@ -6,11 +6,13 @@
     <ul>
       <friend-contact
         v-for="friend in friends"
+        :id="friend.id"
         :key="friend.id"
         :name="friend.id"
         :phone-number="friend.phone"
         :email-address="friend.email"
-        @toggle-favorite="toggleFavorite"
+        :is-favorite="friend.isFavorite"
+        @toggle-favorite="toggleFavoriteStatus"
       ></friend-contact>
     </ul>
   </section>
@@ -26,19 +28,26 @@ export default {
           name: "Manuel Lorenz",
           phone: "0123 45678 90",
           email: "manuel@localhost.com",
+          isFavorite:false
         },
         {
           id: "julie",
           name: "Julie Jones",
           phone: "0987 654421 21",
           email: "julie@localhost.com",
+          isFavorite:false
         },
       ],
     };
   },
   methods:{
-    toggleFavorite(){
-      alert('Works Child to Parent connection!')
+    toggleFavoriteStatus(friendId){
+      this.friends.find(friend => {
+        if(friend.id === friendId){
+          friend.isFavorite = !friend.isFavorite;
+          console.log(333)
+        }
+      })
     }
   }
 };
