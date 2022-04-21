@@ -4,34 +4,22 @@
       <h1>My Friends</h1>
     </header>
     <ul>
-      <friend-contact></friend-contact>
-      <friend-contact></friend-contact>
+      <friend-contact
+        name="Masahiro Kaga"
+        phone-number="6048423195"
+        email-address="masahiro@gmail.com"
+        is-favorite="1"
+      ></friend-contact>
+      <friend-contact
+        name="Eri Kaga"
+        phone-number="11111111111"
+        email-address="eri@gmail.com"
+      ></friend-contact>
     </ul>
   </section>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      friends: [
-        {
-          id: "manuel",
-          name: "Manuel Lorenz",
-          phone: "0123 45678 90",
-          email: "manuel@localhost.com",
-        },
-        {
-          id: "julie",
-          name: "Julie Jones",
-          phone: "0987 654421 21",
-          email: "julie@localhost.com",
-        },
-      ],
-    };
-  },
-};
-</script>
+<script></script>
 
 <style>
 * {
