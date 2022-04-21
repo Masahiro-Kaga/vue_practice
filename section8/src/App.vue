@@ -1,10 +1,7 @@
-<script>
-</script>
+<script></script>
 
 <template>
- <h1>gogo</h1>
+  <friend-contact></friend-contact>
 </template>
 
-<style>
-
-</style>
+<style></style>
