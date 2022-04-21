@@ -10,6 +10,7 @@
         :name="friend.id"
         :phone-number="friend.phone"
         :email-address="friend.email"
+        @toggle-favorite="toggleFavorite"
       ></friend-contact>
     </ul>
   </section>
@@ -35,6 +36,11 @@ export default {
       ],
     };
   },
+  methods:{
+    toggleFavorite(){
+      alert('Works Child to Parent connection!')
+    }
+  }
 };
 </script>
 
