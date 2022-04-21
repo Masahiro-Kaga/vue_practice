@@ -1,6 +1,6 @@
 <template>
   <li>
-    <h2>{{ name }} {{ isFavorite ? "My Favorite Friend" : "" }}</h2>
+    <h2>{{ name }} {{ isFavorite ? " - My Favorite Friend" : "" }}</h2>
     <button @click="toggleDetails">{{ detailsAreVisible ? 'Hide' : 'Show' }} Details</button>
     <ul v-if="detailsAreVisible">
       <li>
@@ -35,9 +35,6 @@ export default {
             type:Boolean,
             required:false,
             default:false,
-            validator:function(value){
-                return value === true || value === false
-            }
         }
     },
   data() {

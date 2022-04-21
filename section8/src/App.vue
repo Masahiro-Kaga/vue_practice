@@ -5,21 +5,38 @@
     </header>
     <ul>
       <friend-contact
-        name="Masahiro Kaga"
-        phone-number="6048423195"
-        email-address="masahiro@gmail.com"
-        v-bind:is-favorite="true"
-      ></friend-contact>
-      <friend-contact
-        name="Eri Kaga"
-        phone-number="11111111111"
-        email-address="eri@gmail.com"
+        v-for="friend in friends"
+        :key="friend.id"
+        :name="friend.id"
+        :phone-number="friend.phone"
+        :email-address="friend.email"
       ></friend-contact>
     </ul>
   </section>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      friends: [
+        {
+          id: "manuel",
+          name: "Manuel Lorenz",
+          phone: "0123 45678 90",
+          email: "manuel@localhost.com",
+        },
+        {
+          id: "julie",
+          name: "Julie Jones",
+          phone: "0987 654421 21",
+          email: "julie@localhost.com",
+        },
+      ],
+    };
+  },
+};
+</script>
 
 <style>
 * {
