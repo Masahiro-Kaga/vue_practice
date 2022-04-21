@@ -1,11 +1,12 @@
 <template>
   <li>
-    <h2>{{ name }}</h2>
+    <h2>{{ name }} {{ isFavorite ? "My Favorite Friend" : "" }}</h2>
     <button @click="toggleDetails">{{ detailsAreVisible ? 'Hide' : 'Show' }} Details</button>
     <ul v-if="detailsAreVisible">
       <li>
         <strong>Phone:</strong>
         {{ phoneNumber }}
+        <h1>{{ isFavorite }}</h1>
       </li>
       <li>
         <strong>Email:</strong>
@@ -31,17 +32,17 @@ export default {
             required:true
         },
         isFavorite:{
-            type:String,
+            type:Boolean,
             required:false,
-            default:"0",
+            default:false,
             validator:function(value){
-                return value ==='1' || value === '0'
+                return value === true || value === false
             }
         }
     },
   data() {
     return {
-      detailsAreVisible:false
+      detailsAreVisible:false,
     };
   },
   methods: {

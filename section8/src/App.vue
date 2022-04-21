@@ -8,7 +8,7 @@
         name="Masahiro Kaga"
         phone-number="6048423195"
         email-address="masahiro@gmail.com"
-        is-favorite="1"
+        is-favorite=true
       ></friend-contact>
       <friend-contact
         name="Eri Kaga"
