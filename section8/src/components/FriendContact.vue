@@ -60,7 +60,7 @@ export default {
       this.$emit("toggle-favorite", this.id);
     },
     deleteInfo(){
-      this.$emit("delete-info");
+      this.$emit("delete-info",this.id);
     }
   },
 };

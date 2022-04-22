@@ -62,8 +62,8 @@ export default {
         isFavorite:false
       });
     },
-    deleteContact(){
-      this.friends.pop();
+    deleteContact(designatedId){
+      this.friends = this.friends.filter(friend => friend.id !== designatedId);
     }
   },
 };
