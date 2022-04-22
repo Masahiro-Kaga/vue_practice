@@ -3,7 +3,10 @@
     <header>
       <h1>My Friends</h1>
     </header>
-    <h1 class="text-3xl font-bold underline text-center">Test Tailwind works!!</h1>
+    <h1 class="text-3xl font-bold underline text-center">
+      Test Tailwind works!!
+    </h1>
+    <new-friend @add-contact="addContact"></new-friend>
     <ul>
       <friend-contact
         v-for="friend in friends"
@@ -46,8 +49,16 @@ export default {
       this.friends.find((friend) => {
         if (friend.id === friendId) {
           friend.isFavorite = !friend.isFavorite;
-          console.log(333);
         }
+      });
+    },
+    addContact(name, phone, email) {
+      this.friends.push({
+        id:new Date().toISOString(),
+        name,
+        phone,
+        email,
+        isFavorite:false
       });
     },
   },
