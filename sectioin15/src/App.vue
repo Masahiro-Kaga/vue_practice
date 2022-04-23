@@ -1,9 +1,11 @@
 <template>
-  <base-container title="Vuex"></base-container>
+  <base-container title="Vuex">
+    <h3>{{ $store.state.counter }}</h3>
+  </base-container>
 </template>
 
 <script>
-import BaseContainer from './components/BaseContainer.vue';
+import BaseContainer from "./components/BaseContainer.vue";
 
 export default {
   components: {
