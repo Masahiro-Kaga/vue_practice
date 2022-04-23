@@ -1,26 +1,31 @@
 <template>
   <the-navigation @set-page="setPage"></the-navigation>
-  <h3>{{selectedPage}}</h3>
+  <main><component :is="selectedPage"></component></main>
 </template>
 
 <script>
 import TheNavigation from "./components/nav/TheNavigation.vue";
-  export default {
-    components:{
-      TheNavigation
-    },
-    data(){
-      return{
-        selectedPage:"teams-item"
+import TeamsList from "./components/teams/TeamsList.vue";
+import UsersList from "./components/users/UsersList.vue";
 
-      }
+export default {
+  components: {
+    TheNavigation,
+    TeamsList,
+    UsersList,
+  },
+  data() {
+    return {
+      selectedPage: "teams-list",
+      
+    };
+  },
+  methods: {
+    setPage(pageType) {
+      this.selectedPage = pageType;
     },
-    methods:{
-      setPage(pageType){
-        this.selectedPage = pageType;
-      }
-    }
-  }
+  },
+};
 </script>
 
 <style>
