@@ -1,3 +1,27 @@
+<template>
+  <the-navigation @set-page="setPage"></the-navigation>
+  <h3>{{selectedPage}}</h3>
+</template>
+
+<script>
+import TheNavigation from "./components/nav/TheNavigation.vue";
+  export default {
+    components:{
+      TheNavigation
+    },
+    data(){
+      return{
+        selectedPage:"teams-item"
+
+      }
+    },
+    methods:{
+      setPage(pageType){
+        this.selectedPage = pageType;
+      }
+    }
+  }
+</script>
 
 <style>
 * {
