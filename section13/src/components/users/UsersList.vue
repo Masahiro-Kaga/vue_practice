@@ -1,23 +1,26 @@
 <template>
-    <li @click="test" class="list-none">
-
-    </li>
+  <ul>
+    <user-item
+      v-for="user in users"
+      :id="user.id"
+      :name="user.fullName"
+      :role="user.role"
+      class="list-none"
+    >
+    </user-item>
+  </ul>
 </template>
 
 <script>
-    export default {
-        inject:['users'],
-        methods:{
-            test(){
-                console.log(this.users)
-            }
-        },
-        computed:{
-
-        }
-    }
+import UserItem from "./UserItem.vue";
+export default {
+    components:{
+        UserItem,
+    },
+  inject: ["users"],
+  methods: {},
+  computed: {},
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
