@@ -18,7 +18,11 @@ export default {
     addOne(){
       // this.$store.state.counter++;
       // this.$store.commit('increment');
-      this.$store.commit('increment',{value:10});
+      // this.$store.commit('increment',{value:10});
+      this.$store.commit({
+        type:'increment',
+        value:200
+      })
     }
   }
 };
