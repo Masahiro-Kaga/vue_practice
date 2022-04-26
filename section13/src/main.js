@@ -13,7 +13,8 @@ const router = createRouter({
     routes:[
         {path:'/teams',component: TeamsList},
         {path:'/users',component: UsersList}
-    ]
+    ],
+    linkActiveClass:'activeMasa'
 })
 
 const app = createApp(App)
