@@ -19,7 +19,7 @@ const router = createRouter({
     linkActiveClass:'activeMasa'
 })
 
-const app = createApp(App)
+const app = createApp(App);
 
 app.use(router);
 
